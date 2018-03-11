@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hensh.moviemanagment.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@raw/main">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/movie1"
+                    android:layout_width="175dp"
+                    android:layout_height="225dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Movie" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <Button
+                    android:id="@+id/movie2"
+                    android:layout_width="175dp"
+                    android:layout_height="225dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Movie" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
