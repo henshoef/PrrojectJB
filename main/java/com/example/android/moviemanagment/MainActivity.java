@@ -90,7 +90,7 @@ public void addMovie(Intent data){
     movieUrl = data.getStringExtra("url");
 
     movieSample = new MovieSample(this, counter, movieName, movieDesc, movieUrl);
-    TextView movieSampleName=new TextView(this);
+    final TextView movieSampleName=new TextView(this);
     movieSampleName.setText(movieName);
     movieSampleName.setTextColor(getResources().getColor(R.color.white));
     movieSample.setId(counter);
@@ -105,6 +105,9 @@ public void addMovie(Intent data){
     movieSample.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+        mainLayout.removeView(movieSample);
+        mainLayout.removeView(movieSampleName);
+
 
         }
     });
@@ -121,24 +124,14 @@ public void addMovie(Intent data){
            addMovie(data);
         }
     }
-    protected void onActivityResultEdit(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
 
-    }
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-       // if (itemId == R.id.addMovieByManual || itemId == R.id.deleteAll || itemId == R.id.exit || itemId == R.id.addMovieByManual) {
-
-           // addMovieByMenual.setChecked(false);
-           // addMovieByIntenet.setChecked(false);
-           // deleteAll.setChecked(false);
-          //  exit.setChecked(false);
-          //  item.setChecked(true);
-       // }
         switch (itemId) {
             case R.id.menuItemSettings:
-
                 return true;
             case R.id.addMovieByManual: {
                 Intent intent = new Intent(this, AddMovie.class);
