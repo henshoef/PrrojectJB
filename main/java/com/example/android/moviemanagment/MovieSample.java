@@ -1,14 +1,13 @@
 package com.example.android.moviemanagment;
 
 import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.Button;
+
 
 /**
  * Created by Android on 11/03/2018.
  */
 
-public class MovieSample extends android.support.v7.widget.AppCompatButton {
+public class MovieSample extends android.support.v7.widget.AppCompatImageView {
      private  int id;
     private  String name;
     private  String decription;

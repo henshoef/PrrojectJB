@@ -58,16 +58,18 @@
                     android:gravity="center"
                     android:hint="@string/url"
                     android:inputType="textPersonName"
-                    android:textColorHint="@color/white" />
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"/>
 
                 <Button
                     android:id="@+id/button"
-                    android:background="@drawable/ic_label_outline_black_24dp"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/ic_label_outline_black_24dp"
+                    android:onClick="onShowClick"
                     android:text="@string/show"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
